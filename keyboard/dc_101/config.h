@@ -20,12 +20,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0xCAFE
-#define PRODUCT_ID      0xDEED
+#define VENDOR_ID       0xFEED
+#define PRODUCT_ID      0xCAFE
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Deepak
-#define PRODUCT         Harness
-#define DESCRIPTION     Keyboard firmware Test
+#define PRODUCT         Test_Harness
+#define DESCRIPTION     DeepakKeyboard
 
 /* key matrix size */
 #define MATRIX_ROWS 6
