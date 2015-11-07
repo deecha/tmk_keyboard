@@ -154,6 +154,7 @@ static void  init_cols(void)
 
 static matrix_row_t read_cols(void)
 {
+    //ledon();
     return (PINB&(1<<7) ? 0 : (1<<0)) |
            (PIND&(1<<0) ? 0 : (1<<1)) |
            (PIND&(1<<1) ? 0 : (1<<2)) |
@@ -196,6 +197,7 @@ static void select_row(uint8_t row)
         case 0:
             DDRF  |= (1<<0);
             PORTF &= ~(1<<0);
+            //PORTD |= (1<<6);
             break;
         case 1:
             DDRF  |= (1<<1);
@@ -218,4 +220,16 @@ static void select_row(uint8_t row)
             PORTF &= ~(1<<5);
             break;
     }
+}
+
+inline void ledon()
+{
+    DDRD |= (1<<6);
+    PORTD |= (1<<6);
+}
+
+inline void ledoff()
+{
+    DDRD |= (1<<6);
+    PORTD &= ~(1<<6);
 }
